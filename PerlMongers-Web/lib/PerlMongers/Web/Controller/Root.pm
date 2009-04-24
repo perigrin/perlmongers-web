@@ -26,18 +26,17 @@ PerlMongers::Web::Controller::Root - Root Controller for PerlMongers::Web
 
 =cut
 
-sub index :Path :Args(0) {
+sub index : Path : Args(0) {
     my ( $self, $c ) = @_;
-
-    # Hello World
-    $c->response->body( $c->welcome_message );
+    $c->response->body( $c->model('XML')->root->dump );
+    $c->response->status(200);
 }
 
-sub default :Path {
+sub default : Path {
     my ( $self, $c ) = @_;
-    $c->response->body( 'Page not found' );
+    $c->response->body('Page not found');
     $c->response->status(404);
-    
+
 }
 
 =head2 end
@@ -46,7 +45,8 @@ Attempt to render a view, if needed.
 
 =cut 
 
-sub end : ActionClass('RenderView') {}
+sub end : ActionClass('RenderView') {
+}
 
 =head1 AUTHOR
 
