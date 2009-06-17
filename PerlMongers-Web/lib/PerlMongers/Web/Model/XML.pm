@@ -16,12 +16,10 @@ has input => (
 sub _build_input { 'perl_mongers.xml' }
 
 has namespace => (
-    isa        => 'Str',
-    is         => 'ro',
-    lazy_build => 1,
+    isa     => 'Str',
+    is      => 'ro',
+    default => 'PerlMongers::Model',
 );
-
-sub _build_namespace { 'Acme' }
 
 has _loader => (
     isa        => 'XML::Toolkit::Loader',
@@ -30,14 +28,18 @@ has _loader => (
 );
 
 sub _build__loader {
-    my $self = shift;
-    my $loader = XML::Toolkit::Loader->new( namespace => $self->namespace );
+    my $self   = shift;
+    my $loader = XML::Toolkit::Loader->new(
+        namespace    => $self->namespace,
+        filter_class => 'XML::Toolkit::Loader::ParserNS'
+
+    );
     $loader->parse_file( $self->input->stringify );
     return $loader;
 }
 
 has root => (
-    isa        => 'Acme::Perl_mongers',
+    isa        => 'PerlMongers::Model::Perl_mongers',
     is         => 'ro',
     lazy_build => 1,
 );
