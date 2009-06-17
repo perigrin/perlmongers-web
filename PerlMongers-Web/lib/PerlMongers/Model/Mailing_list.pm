@@ -11,7 +11,7 @@ has 'email_collection' => (
      lazy        => 1,
      auto_deref  => 1,
      default     => sub { [] },
-     provides    => { push => 'email' },
+     provides    => { push => 'add_email' },
      description => {
          sort_order => 0,
      },
@@ -24,7 +24,7 @@ has 'name_collection' => (
      lazy        => 1,
      auto_deref  => 1,
      default     => sub { [] },
-     provides    => { push => 'name' },
+     provides    => { push => 'add_name' },
      description => {
          sort_order => 1,
      },
@@ -37,7 +37,7 @@ has 'subscribe_collection' => (
      lazy        => 1,
      auto_deref  => 1,
      default     => sub { [] },
-     provides    => { push => 'subscribe' },
+     provides    => { push => 'add_subscribe' },
      description => {
          sort_order => 2,
      },
@@ -50,7 +50,7 @@ has 'unsubscribe_collection' => (
      lazy        => 1,
      auto_deref  => 1,
      default     => sub { [] },
-     provides    => { push => 'unsubscribe' },
+     provides    => { push => 'add_unsubscribe' },
      description => {
          sort_order => 3,
      },

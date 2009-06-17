@@ -1,14 +1,25 @@
 package PerlMongers::Web::Controller::Root;
+use Moose;
 
-use strict;
-use warnings;
-use parent 'Catalyst::Controller';
+BEGIN { extends 'Catalyst::Controller::REST'; }
 
 #
 # Sets the actions in this controller to be registered with no prefix
 # so they function identically to actions created in MyApp.pm
 #
 __PACKAGE__->config->{namespace} = '';
+
+#
+# Sets the actions in this controller to be registered with no prefix
+# so they function identically to actions created in MyApp.pm
+#
+__PACKAGE__->config(
+    default => 'text/html',
+    map     => {
+        'text/html' => [ 'View', 'TT' ],
+        'text/xml'  => undef,
+    },
+);
 
 =head1 NAME
 
@@ -26,17 +37,13 @@ PerlMongers::Web::Controller::Root - Root Controller for PerlMongers::Web
 
 =cut
 
-sub index : Path : Args(0) {
-    my ( $self, $c ) = @_;
-    $c->response->body( $c->model('XML')->root->dump );
-    $c->response->status(200);
+sub index : Path('/') ActionClass('REST') {
 }
 
-sub default : Path {
+sub index_GET {
     my ( $self, $c ) = @_;
-    $c->response->body('Page not found');
-    $c->response->status(404);
-
+    $c->stash->{root}     = $c->model('XML')->root;
+    $c->stash->{template} = 'index.tt2';
 }
 
 =head2 end

@@ -11,7 +11,7 @@ has 'date_collection' => (
      lazy        => 1,
      auto_deref  => 1,
      default     => sub { [] },
-     provides    => { push => 'date' },
+     provides    => { push => 'add_date' },
      description => {
          sort_order => 0,
      },
@@ -24,7 +24,7 @@ has 'email_collection' => (
      lazy        => 1,
      auto_deref  => 1,
      default     => sub { [] },
-     provides    => { push => 'email' },
+     provides    => { push => 'add_email' },
      description => {
          sort_order => 1,
      },
@@ -50,7 +50,7 @@ has 'location_collection' => (
      lazy        => 1,
      auto_deref  => 1,
      default     => sub { [] },
-     provides    => { push => 'location' },
+     provides    => { push => 'add_location' },
      description => {
          sort_order => 3,
      },
@@ -63,7 +63,7 @@ has 'mailing_list_collection' => (
      lazy        => 1,
      auto_deref  => 1,
      default     => sub { [] },
-     provides    => { push => 'mailing_list' },
+     provides    => { push => 'add_mailing_list' },
      description => {
          sort_order => 4,
      },
@@ -76,7 +76,7 @@ has 'name_collection' => (
      lazy        => 1,
      auto_deref  => 1,
      default     => sub { [] },
-     provides    => { push => 'name' },
+     provides    => { push => 'add_name' },
      description => {
          sort_order => 5,
      },
@@ -102,7 +102,7 @@ has 'tsar_collection' => (
      lazy        => 1,
      auto_deref  => 1,
      default     => sub { [] },
-     provides    => { push => 'tsar' },
+     provides    => { push => 'add_tsar' },
      description => {
          sort_order => 7,
      },
@@ -115,7 +115,7 @@ has 'web_collection' => (
      lazy        => 1,
      auto_deref  => 1,
      default     => sub { [] },
-     provides    => { push => 'web' },
+     provides    => { push => 'add_web' },
      description => {
          sort_order => 8,
      },

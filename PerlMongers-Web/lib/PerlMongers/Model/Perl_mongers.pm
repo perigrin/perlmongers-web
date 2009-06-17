@@ -11,7 +11,7 @@ has 'group_collection' => (
      lazy        => 1,
      auto_deref  => 1,
      default     => sub { [] },
-     provides    => { push => 'group' },
+     provides    => { push => 'add_group' },
      description => {
          sort_order => 0,
      },

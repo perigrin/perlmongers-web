@@ -13,7 +13,7 @@ has input => (
     lazy_build => 1,
 );
 
-sub _build_input { 'perl_mongers.xml' }
+sub _build_input { 'root/static/perl_mongers.xml' }
 
 has namespace => (
     isa     => 'Str',

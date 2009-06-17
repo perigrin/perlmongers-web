@@ -11,7 +11,7 @@ has 'city_collection' => (
      lazy        => 1,
      auto_deref  => 1,
      default     => sub { [] },
-     provides    => { push => 'city' },
+     provides    => { push => 'add_city' },
      description => {
          sort_order => 0,
      },
@@ -24,7 +24,7 @@ has 'continent_collection' => (
      lazy        => 1,
      auto_deref  => 1,
      default     => sub { [] },
-     provides    => { push => 'continent' },
+     provides    => { push => 'add_continent' },
      description => {
          sort_order => 1,
      },
@@ -37,7 +37,7 @@ has 'country_collection' => (
      lazy        => 1,
      auto_deref  => 1,
      default     => sub { [] },
-     provides    => { push => 'country' },
+     provides    => { push => 'add_country' },
      description => {
          sort_order => 2,
      },
@@ -50,7 +50,7 @@ has 'latitude_collection' => (
      lazy        => 1,
      auto_deref  => 1,
      default     => sub { [] },
-     provides    => { push => 'latitude' },
+     provides    => { push => 'add_latitude' },
      description => {
          sort_order => 3,
      },
@@ -63,7 +63,7 @@ has 'longitude_collection' => (
      lazy        => 1,
      auto_deref  => 1,
      default     => sub { [] },
-     provides    => { push => 'longitude' },
+     provides    => { push => 'add_longitude' },
      description => {
          sort_order => 4,
      },
@@ -76,7 +76,7 @@ has 'region_collection' => (
      lazy        => 1,
      auto_deref  => 1,
      default     => sub { [] },
-     provides    => { push => 'region' },
+     provides    => { push => 'add_region' },
      description => {
          sort_order => 5,
      },
@@ -89,7 +89,7 @@ has 'state_collection' => (
      lazy        => 1,
      auto_deref  => 1,
      default     => sub { [] },
-     provides    => { push => 'state' },
+     provides    => { push => 'add_state' },
      description => {
          sort_order => 6,
      },

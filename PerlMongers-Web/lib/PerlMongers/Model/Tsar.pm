@@ -11,7 +11,7 @@ has 'email_collection' => (
      lazy        => 1,
      auto_deref  => 1,
      default     => sub { [] },
-     provides    => { push => 'email' },
+     provides    => { push => 'add_email' },
      description => {
          sort_order => 0,
      },
@@ -24,7 +24,7 @@ has 'name_collection' => (
      lazy        => 1,
      auto_deref  => 1,
      default     => sub { [] },
-     provides    => { push => 'name' },
+     provides    => { push => 'add_name' },
      description => {
          sort_order => 1,
      },
@@ -37,7 +37,7 @@ has 'pause_id_collection' => (
      lazy        => 1,
      auto_deref  => 1,
      default     => sub { [] },
-     provides    => { push => 'pause_id' },
+     provides    => { push => 'add_pause_id' },
      description => {
          sort_order => 2,
      },
