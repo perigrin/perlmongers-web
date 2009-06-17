@@ -29,6 +29,19 @@ has 'name_collection' => (
          sort_order => 1,
      },
 );
+has 'pause_id_collection' => (
+     isa         => 'ArrayRef[PerlMongers::Model::Pause_id]',
+     is          => 'ro',
+     traits      => [ 'XML' ],
+      metaclass   => 'Collection::Array',
+     lazy        => 1,
+     auto_deref  => 1,
+     default     => sub { [] },
+     provides    => { push => 'pause_id' },
+     description => {
+         sort_order => 2,
+     },
+);
 
 no Moose;
 1;
