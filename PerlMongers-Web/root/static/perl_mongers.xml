@@ -102,7 +102,7 @@
 
 <!-- This file is maintained by user_groups@pm.org -->
 
-<!-- $Id: perl_mongers.xml 579 2008-11-27 13:02:12Z jhannah $ -->
+<!-- $Id: perl_mongers.xml 587 2009-03-13 13:49:15Z jhannah $ -->
 <perl_mongers>
 	<group id="0" status="active">
 		<!-- new york was the first group -->
@@ -513,19 +513,11 @@
 			<longitude>-87.68496</longitude>
 			<latitude>41.83705</latitude>
 		</location>
-		<email type="group"></email>
 		<tsar>
 			<name>Andy Lester</name>
 			<email type="personal">andy@petdance.com</email>
 		</tsar>
 		<web>http://chicago.pm.org/</web>
-		<mailing_list>
-			<name>General Chicago.pm discussion</name>
-			<email type="list"></email>
-			<email type="list_admin"></email>
-			<subscribe></subscribe>
-			<unsubscribe></unsubscribe>
-		</mailing_list>
 		<date type="inception">19980410</date>
 	</group>
 	
@@ -743,7 +735,7 @@
 		<date type="inception">19981124</date>
 	</group>
 	
-	<group id="29" status="active">
+	<group id="29" status="sleeping">
 		<name>DesMoines.pm</name>
 		<location>
 			<city>Des Moines</city>
@@ -754,12 +746,11 @@
 			<longitude>-93.6087</longitude>
 			<latitude>41.6006</latitude>
 		</location>
-		<email type="group"></email>
 		<tsar>
 			<name>Richard P. Thielman</name>
 			<email type="personal">tman@technologist.com</email>
 		</tsar>
-		<web></web>
+		<web>http://desmoines.pm.org</web>
 		<date type="inception">19990503</date>
 	</group>
 	
@@ -774,7 +765,6 @@
 			<longitude>-83.0456</longitude>
 			<latitude>42.3317</latitude>
 		</location>
-		<email type="group"></email>
 		<tsar>
 			<name>Bill Hess</name>
 			<email type="personal">bhess@techrg.com</email>
@@ -2055,17 +2045,10 @@
 		</location>
 		<email type="group"></email>
 		<tsar>
-			<name>Quinn Weaver</name>
-			<email type="personal">qw@sf.pm.org</email>
+			<name>Fred Moyer</name>
+			<email type="personal">fred@redhotpenguin.com</email>
 		</tsar>
 		<web>http://sf.pm.org/</web>
-		<mailing_list>
-			<name>General SanFrancisco.pm discussion</name>
-			<email type="list"></email>
-			<email type="list_admin"></email>
-			<subscribe></subscribe>
-			<unsubscribe></unsubscribe>
-		</mailing_list>
 		<date type="inception">19980615</date>
 	</group>
 	
@@ -2355,10 +2338,9 @@
 			<longitude>-123.133</longitude>
 			<latitude>49.25</latitude>
 		</location>
-		<email type="group"></email>
 		<tsar>
-			<name>Chris Simmons</name>
-			<email type="personal">simmons.chris@gmail.com</email>
+			<name>Scott McWhirter</name>
+			<email type="personal">scott@konobi.co.uk</email>
 		</tsar>
 		<web>http://vancouver.pm.org/</web>
 		<mailing_list>
@@ -2547,7 +2529,6 @@
 			<longitude>-46.617</longitude>
 			<latitude>-23.533</latitude>
 		</location>
-		<email type="group"></email>
 		<tsar>
 			<name>Solli Moreira Honorio</name>
 			<email type="personal">shonorio@gmail.com</email>
@@ -3204,7 +3185,7 @@
 		<email type="group"></email>
 		<tsar>
 			<name>Flavio Poletti</name>
-			<email type="personal">flavio@polettix.it</email>
+			<email type="personal">polettix@gmail.com</email>
 		</tsar>
 		<web>http://roma.pm.org/</web>
 		<date type="inception">19990131</date>
@@ -3764,7 +3745,7 @@
 		<date type="inception">19990311</date>
 	</group>
 	
-	<group id="176" status="dead">
+	<group id="176" status="active">
 		<name>Perth.pm</name>
 		<location>
 			<city>Perth</city>
@@ -3777,8 +3758,8 @@
 		</location>
 		<email type="group"></email>
 		<tsar>
-			<name>Simon Newton</name>
-			<email type="personal">newtons@iinet.net</email>
+			<name>Matthew Lock</name>
+			<email type="personal">lockster@gmail.com</email>
 		</tsar>
 		<web>http://perth.pm.org/</web>
 		<date type="inception">19990127</date>
@@ -4461,7 +4442,7 @@
 		</location>
 		<tsar>
 			<name>Keedi Kim</name>
-			<email type="personal">keedi.k@gmail.com</email>
+			<email type="personal">keedi@perl.kr</email>
 		</tsar>
 		<web>http://seoul.pm.org/</web>
 		<date type="inception">19990914</date>
@@ -5011,7 +4992,7 @@
 		<date type="inception">19991024</date>
 	</group>
 
-	<group id="235" status="active">
+	<group id="235" status="inactive">
 		<name>PortoAlegre.pm</name>
 		<location>
 			<city>Porto Alegre</city>
@@ -8980,19 +8961,15 @@
                         <longitude>0.12634</longitude>
                         <latitude>52.19077</latitude>
 		</location>
-		<email type="group"></email>
 		<tsar>
 			<name>Lucy McWilliam</name>
 			<email type="personal">lucifer@chiark.greenend.org.uk</email>
 		</tsar>
+		<tsar>
+			<name>Robbie Bow</name>
+			<email type="personal">robbiebow@gmail.com</email>
+		</tsar>
 		<web>http://cam.pm.org/</web>
-		<mailing_list>
-			<name>General Cambridge Perl Mongers discussion</name>
-			<email type="list">cam-pm@pm.org</email>
-			<email type="list_admin">lucifer@plus.colondot.net</email>
-			<subscribe>subscribe members email_address</subscribe>
-			<unsubscribe>unsubscribe members email_address</unsubscribe>
-		</mailing_list>
 		<date type="inception">20010620</date>
 	</group>
 
@@ -11769,21 +11746,14 @@
                         <longitude>120.18108</longitude>
                         <latitude>22.38225</latitude>
 		</location>
-		<email type="group"></email>
 		<tsar>
 			<name>Matthew Lien</name>
-			<email type="personal">matthew@bluet.org</email>
+			<email type="personal">BlueT@BlueT.org</email>
 		</tsar>
 		<web>http://kaohsiung.pm.org/</web>
-		<mailing_list>
-			<name>General Kaohsiung Perl Mongers discussion</name>
-			<email type="list">kaohsiung-pm@pm.org</email>
-			<email type="list_admin">matthewno1@yahoo.com</email>
-			<subscribe>subscribe members email_address</subscribe>
-			<unsubscribe>unsubscribe members email_address</unsubscribe>
-		</mailing_list>
 		<date type="inception">20020806</date>
 	</group>
+
 	<group id="531" status="inactive">
 		<name>Depok.pm</name>
 		<location>
@@ -12365,19 +12335,12 @@
 			<longitude></longitude>
 			<latitude></latitude>
 		</location>
-		<email type="group"></email>
 		<tsar>
-			<name>Geert Theys</name>
-			<email type="personal">geert@toadi.org</email>
+			<name>Chris Vertonghen</name>
+			<email type="personal">chris@vertonghen.org</email>
+                        <pause_id>chrisv</pause_id>
 		</tsar>
 		<web>http://vlaanderen.pm.org/</web>
-		<mailing_list>
-			<name>General Vlaanderen Perl Mongers discussion</name>
-			<email type="list">vlaanderen-pm@pm.org</email>
-			<email type="list_admin">geert@toadi.org</email>
-			<subscribe>subscribe members email_address</subscribe>
-			<unsubscribe>unsubscribe members email_address</unsubscribe>
-		</mailing_list>
 		<date type="inception">20030109</date>
 	</group>
 
@@ -15853,6 +15816,24 @@
                 </tsar>
                 <web>http://guincho.pm.org</web>
                 <date type="inception">20081125</date>
+        </group>
+        <group id="728" status="active">
+                <name>northwestengland.pm</name>
+                <location>
+                        <city>Lancaster/Preston</city>
+                        <state>Lancaster-Fylde-Cheshire</state>
+                        <region>North West England</region>
+                        <country>United Kingdom</country>
+                        <continent>Europe</continent>
+                        <longitude>-2.8125</longitude>
+                        <latitude>54.0400</latitude>
+                </location>
+                <tsar>
+                        <name>Mark Keating</name>
+                        <email type="personal">mdk@shadowcat.co.uk</email>
+                </tsar>
+                <web>http://northwestengland.pm.org</web>
+                <date type="inception">20081228</date>
         </group>
 </perl_mongers>
 
