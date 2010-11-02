@@ -1,0 +1,9 @@
+[% WRAPPER common/page.tt2
+      title = 'PerlMongers - Nearest Groups'
+%]
+        [% WHILE (items = rest.iter.next ) %]
+                [% FOR group IN items %]  
+                    [% INCLUDE common/group.tt2 %]
+                [% END %]
+        [% END %]
+[% END %]

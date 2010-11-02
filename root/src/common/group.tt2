@@ -1,0 +1,32 @@
+<section id="group[% group.id %]" class="group [% IF group.is_active %]active[% ELSE %]inactive[% END %]">
+    <header><h2>[% group.name.text %]</h2></header>
+    <dl>
+        <dt>Status</dt><dd>[% IF group.is_active %][% group.status | ucfirst %][% ELSE %]Inactive[% END %] </dd>
+        <dt>Started</dt><dd><time>[% group.dates.first.text || 'Unknown' %]</time></dd>
+        <dt>Leader</dt><dd>
+            [% IF group.tsar.pause_id %]
+                <a href="http://search.cpan.org/~[% group.tsar.pause_id.text %]">[% group.tsar.name.text %]</a>
+            [% ELSE %]
+                [% group.tsar.name.text %]
+            [% END %]
+        </dd>
+        [% IF group.web_collection.first.text %]
+        <dt>Websites</dt><dd>
+            <ul>                    
+            [% FOR site IN group.web_collection %]
+               <li><a href="[% site.text %]">[% site.text %]</a></li>
+            [% END %]
+            </ul>
+        <dd>
+        [% END %]
+        [% IF group.mailing_list_collection.first.text %]
+        <dt>Mailing Lists</dt><dd>
+            <ul>
+            [% FOR list IN group.mailing_list_collection %]
+                <li>[% list.name.text %]</li>
+            [% END %]
+            </ul>
+        </dd>
+        [% END %]
+    </dl>
+</section>

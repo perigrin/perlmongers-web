@@ -1,0 +1,13 @@
+---
+name: 'Find-a-Monger'
+using_frontend_proxy: 1
+copy: '&copy; Tamarou- 2010 Some Rights Reserved.'
+'Model::Kioku':
+    dsn: "dbi:SQLite:site.db"
+    extra_args:
+      user: ''
+      password: ''
+      create: 1
+'Model::Media':
+    args:
+        media_directory: root/static/media

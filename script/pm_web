@@ -1,0 +1,5 @@
+#!/usr/bin/env perl
+use 5.12.0;
+use lib qw(lib);
+use PerlMongers::Cmd;
+PerlMongers::Cmd->run;

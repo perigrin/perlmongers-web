@@ -1,0 +1,6 @@
+[% WRAPPER common/page.tt2
+      title = 'PerlMongers - Nearest Groups'
+%]
+    [% group = rest %]
+    [% INCLUDE common/group.tt2 %]
+[% END %]

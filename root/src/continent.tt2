@@ -1,0 +1,10 @@
+[% continent = rest.continent | ucfirst %]
+[% WRAPPER common/page.tt2
+      title = "PerlMongers - $continent Groups"
+%]
+    [% WHILE (items = rest.iter.next ) %]
+        [% FOR group IN items %]  
+            [% INCLUDE common/group.tt2 %]
+        [% END %]
+    [% END %]
+[% END %]

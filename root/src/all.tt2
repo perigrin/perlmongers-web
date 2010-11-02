@@ -1,0 +1,9 @@
+[% WRAPPER common/page.tt2
+      title = 'PerlMongers - All Groups'
+%]
+    [% WHILE (items = rest.iter.next ) %]
+            [% FOR group IN items %]  
+                [% INCLUDE common/group.tt2 %]
+            [% END %]
+    [% END %]    
+[% END %]

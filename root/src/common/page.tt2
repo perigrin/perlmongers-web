@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en">
+    <head>
+        <title>[% title %]</title>
+        <link type="text/css" rel="stylesheet" href="http://github.com/stubbornella/oocss/raw/master/core/grid/grids.css" />
+        <style type="text/css" media="screen">
+            html { 
+                background-color: #004065;
+                font-size: 10pt;
+                font-family: Helvetica, sans-serif;
+            }
+            headers { color: white; }
+            h1, h2, h3, h4, h5, h6 { font-family: Garamond, serif;}
+            #content { margin-left: 2.5ex; }
+            section {
+                margin-top: 2.5ex;
+                margin-bottom: 2.5ex;
+                padding: 3ex;
+                min-width: 20ex;
+                background-color: white;
+                overflow: hidden;                
+                border-radius: 10px;
+                border: 1px solid #004065;
+            }
+            section.inactive { background-color: #AAA; }
+            #content section:first-child { margin-top: 0px;}
+            nav {
+                padding: 2ex;
+                background-color: white;
+                overflow: hidden;                
+                border-radius: 10px;
+                border: 1px solid #004065;  
+                max-width: 20ex;              
+            }
+            nav ul { padding: 0px; margin: 0px;}
+            nav li { margin-top: 1.5ex; margin-bottom: 1.5ex;}
+            dl {
+                padding: 0.5em;
+              }
+              dt {
+                float: left;
+                clear: left;
+                width: 100px;
+                text-align: right;
+                font-weight: bold;
+              }
+              dt:after {
+                content: ":";
+              }
+              dd {
+                margin: 0 0 0 110px;
+                padding: 0 0 0.5em 0;
+              }
+            li { list-style-type: none; margin: 0; padding: 0;}
+        </style>
+    </head>
+    <body>
+        <headers class="unit size1of1">
+            <div class="unit size1of5"><img src="/static/images/camel.png" width="48" height="48" alt="Camel"></div>
+            <div class="unit lastUnit"><h1>[% title %]</h1></div>
+        </headers>
+        <nav class="unit size1of5">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/groups/nearest">Nearest</a></li>
+          </ul>
+          <h2>Groups</h2>
+          <ul>
+              <li><a href="/groups/Africa">Africa</a></li>
+              <li><a href="/groups/Asia">Asia</a></li>
+              <li><a href="/groups/Central America">Central America</a></li>
+              <li><a href="/groups/Europe">Europe</a></li>
+              <li><a href="/groups/Non-geographical">Non-geographical</a></li>
+              <li><a href="/groups/North America">North America</a></li>
+              <li><a href="/groups/Oceania">Oceania</a></li>
+              <li><a href="/groups/South America">South America</a></li>
+          </ul>
+        </nav>
+        <div id="content" class="unit size3of4">
+        [% content %]
+        </div>
+        <footer class="unit size1of1 lastUnit">
+            [% c.conf.copy %]
+        </footer>
+    </body>
+</html>

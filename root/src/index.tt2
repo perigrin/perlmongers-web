@@ -1,13 +1,7 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
-
-<html>
-<head>
-    <title></title>
-</head>
-
-<body>
-    <pre>
-[% root.dump %]
-</pre>
-</body>
-</html>
+[% WRAPPER common/page.tt2
+      title = 'PerlMongers - Nearest Groups'
+%]
+        [% FOR group IN rest.groups %] 
+            [% INCLUDE common/group.tt2 %]
+        [% END %]
+[% END %]

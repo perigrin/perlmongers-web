@@ -1,13 +1,6 @@
 package PerlMongers::Web::Controller::Root;
 use Moose;
-
-BEGIN { extends 'Catalyst::Controller::REST'; }
-
-#
-# Sets the actions in this controller to be registered with no prefix
-# so they function identically to actions created in MyApp.pm
-#
-__PACKAGE__->config->{namespace} = '';
+BEGIN { extends 'Catalyst::Controller::REST' }
 
 #
 # Sets the actions in this controller to be registered with no prefix
@@ -17,53 +10,45 @@ __PACKAGE__->config(
     default => 'text/html',
     map     => {
         'text/html' => [ 'View', 'TT' ],
-        'text/xml'  => undef,
+        'text/xml'  => undef
     },
+    namespace => '',
 );
-
-=head1 NAME
-
-PerlMongers::Web::Controller::Root - Root Controller for PerlMongers::Web
-
-=head1 DESCRIPTION
-
-[enter your description here]
-
-=head1 METHODS
-
-=cut
-
-=head2 index
-
-=cut
 
 sub index : Path('/') ActionClass('REST') {
 }
 
 sub index_GET {
     my ( $self, $c ) = @_;
-    $c->stash->{root}     = $c->model('XML')->root;
-    $c->stash->{template} = 'index.tt2';
+    my ($root) =
+      $c->model('Kioku')
+      ->search( { class => 'PerlMongers::Model::XML::Perl_mongers' } )->items;
+    $self->status_ok( $c, entity => $root );
 }
 
-=head2 end
+sub default {
+    my ( $self, $c ) = @_;
+    $c->response->body('Page not found');
+    $c->response->status(404);
 
-Attempt to render a view, if needed.
-
-=cut 
-
-sub end : ActionClass('RenderView') {
 }
 
-=head1 AUTHOR
-
-Chris Prather
-
-=head1 LICENSE
-
-This library is free software, you can redistribute it and/or modify
-it under the same terms as Perl itself.
-
-=cut
-
+sub auto : Private {
+    my ( $self, $c, @args ) = @_;
+    if ( my $sid = $c->req->params->{SID} ) {
+        if ( my $session_data = $c->get_session_data("session:$sid") ) {
+            if ( my $user_data = $session_data->{__user} ) {
+                delete $c->req->params->{SID};
+                $c->authenticate(
+                    {
+                        username => $user_data->{email},
+                        password => $user_data->{password}
+                    }
+                );
+            }
+        }
+    }
+    return 1;
+}
 1;
+__END__
